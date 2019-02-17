@@ -26,15 +26,13 @@ public class ListViewActivity extends AppCompatActivity {
         list_view.setAdapter(adapter);
 
         list_view.setOnItemClickListener(
-                new AdapterView.OnItemClickListener() {
-                    @Override
-                    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                        String value=(String)list_view.getItemAtPosition(i);
-                        Toast.makeText(ListViewActivity.this , "You clicked "+" "+value , Toast.LENGTH_SHORT ).show();
-                    }
+            new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                    String value=(String)list_view.getItemAtPosition(i);
+                    Toast.makeText(ListViewActivity.this , "You clicked "+" "+value , Toast.LENGTH_SHORT ).show();
                 }
+            }
         );
     }
-
-
 }
